@@ -1,4 +1,4 @@
-// Set up MySql connection
+// Set up MySql connection.
 const mysql = require("mysql");
 
 const connection = mysql.createConnection({
@@ -8,4 +8,13 @@ const connection = mysql.createConnection({
     password: "",
     database: "burgers_db"
 });
+
+// Make connection. 
+connection.connect((err) => {
+    if (err) {
+        console.log("error connecting: " + err.stack);
+        return;
+    }
+    console.log("connection as id " + connection.threadId);
+})
 
