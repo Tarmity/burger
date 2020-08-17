@@ -60,7 +60,7 @@ const orm = {
                 throw err;
             }
 
-            cb(result);
+            cb(results);
         });
     },
 
@@ -81,7 +81,7 @@ const orm = {
             cb(result);
         });
     },
-    
+
     delete: (table, condition, cb) => {
         let queryString = "DELETE FROM " + table;
         queryString += " WHERE ";
