@@ -10,12 +10,12 @@ router.get("/", (req, res) => {
         const hbsObject = {
             burgers: data
         };
-        console.log(hbsObject);
+        //console.log(hbsObject);
         res.render("index", hbsObject);
     });
 });
 
-router.post("/api/burgers", (req, res) => {
+router.post("/api/burger", (req, res) => {
     burger.create([
         "burger_name", "devoured"
     ], [
@@ -25,10 +25,10 @@ router.post("/api/burgers", (req, res) => {
     });
 });
 
-router.put("/api/burgers/:id", (req, res) => {
+router.put("/api/burger/:id", (req, res) => {
     const condition = "id = " + req.params.id;
 
-    console.log("condition", condition);
+    //console.log("condition", condition);
 
     burger.update({
         devoured: req.body.devoured
@@ -41,7 +41,7 @@ router.put("/api/burgers/:id", (req, res) => {
     });
 });
 
-router.delete("/api/burgers/:id", (req, res) => {
+router.delete("/api/burger/:id", (req, res) => {
     const condition = "id = " + req.params.id;
 
     burger.delete(condition, (result) => {

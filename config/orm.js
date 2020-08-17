@@ -53,7 +53,7 @@ const orm = {
         queryString += printQuestionMarks(vals.length);
         queryString += ") ";
 
-        console.log(queryString);
+        //console.log(queryString);
 
         connection.query(queryString, vals, (err, results) => {
             if (err) {
@@ -80,7 +80,21 @@ const orm = {
 
             cb(result);
         });
-    }
+    },
+    
+    delete: (table, condition, cb) => {
+        let queryString = "DELETE FROM " + table;
+        queryString += " WHERE ";
+        queryString += condition;
+    
+        connection.query(queryString, (err, result) => {
+          if (err) {
+            throw err;
+          }
+    
+          cb(result);
+        });
+      }
 };
 
 // Export the orm object for the model

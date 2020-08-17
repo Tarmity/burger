@@ -47,7 +47,7 @@ $(() => {
       const id = $(this).data("id");
   
       // Send the DELETE request.
-      $.ajax("/api/burgers/" + id, {
+      $.ajax("/api/burgers" + id, {
         type: "DELETE"
       }).then(
         () => {
