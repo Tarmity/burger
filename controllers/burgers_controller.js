@@ -29,13 +29,15 @@ router.post("/api/burgers", (req, res) => {
 
 router.put("/api/burgers/:id", (req, res) => {
     const condition = "id = " + req.params.id;
-
+         let devouredState = {
+             devoured: 1
+         };
     //console.log("condition", condition);
 
     burger.update({
         devoured: req.body.devoured
     }, condition, (result) => {
-        if (result.chamgerdRows == 0) {
+        if (result.changedRows == 0) {
             return res.status(404).end();
         }else {
             res.status(200).end();
