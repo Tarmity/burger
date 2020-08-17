@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 8080;
 
 const app = express();
 
-app.use(express.stack("public"));
+app.use(express.static("public"));
 
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
@@ -19,5 +19,5 @@ const routes = require("./controllers/burgers_controller.js");
 app.use(routes);
 
 app.listen(PORT, () => {
-    consoler.log("Server listening on://localhost:" + PORT);
+    console.log("Server listening on://localhost:" + PORT);
 })
