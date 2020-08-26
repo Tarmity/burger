@@ -21,7 +21,7 @@
     npm install
 
   ## Usage
-  To use the Burger Logger, download all the files in the repository, open you terminal window and run the the program with th cmd node server.js, this will start the localhost, make sure you have MySql installed and you update the password on the connection.js file. You Can also directly to this link: https://guarded-journey-06378.herokuapp.com/ for the live version. 
+  To use the Burger Logger, download all the files in the repository, open you terminal window and run the the program with th cmd node server.js, this will start the localhost, make sure you have MySql installed and you update the password on the connection.js file. You Can also go directly to this link: https://guarded-journey-06378.herokuapp.com/ for the live version. 
   
 
   ## License
